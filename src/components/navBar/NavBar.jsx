@@ -42,7 +42,7 @@ const NavBar = () => {
 
   return (
     <header>
-      <div className=" relative ">
+      <div className=" relative z-10 ">
         <div className=" nav bg-slate-900 h-20 m-auto lg:rounded-md lg:shadow-sm shadow-white flex justify-between items-center px-3 ">
           <div className=" flex items-center h-full cursor-pointer flex-row ">
             <img src={Logo} alt="logo" className=" h-4/6 md:h-16 " />
@@ -63,7 +63,7 @@ const NavBar = () => {
               })}
             </div>
             <div>
-              <button className=" bg-yellow-500 px-4 py-2 text-yellow-800 rounded-md hover:text-white ">
+              <button className=" bg-yellow-600 px-4 py-2 rounded-md hover:text-white ">
                 Login
               </button>
             </div>
@@ -87,14 +87,14 @@ const NavBar = () => {
             })}
           </ul>
           <div>
-            <button className=" ml-2 bg-yellow-500 px-4 text-yellow-800 rounded-md hover:text-white ">
+            <button className=" ml-2 bg-yellow-600 px-4 rounded-md hover:text-white ">
               Login
             </button>
           </div>
         </div>
       </div>
       <div className={scroll? "up" : "upnone"} onClick={() => topFunction()} >
-        <i class="fa-solid fa-angle-up text-xl "></i>
+        <i class="fa-solid fa-angle-up fa-bounce text-xl "></i>
       </div>
     </header>
   );

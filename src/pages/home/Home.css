@@ -1,5 +1,7 @@
 .home {
   width: 100%;
+  background: url(https://images.unsplash.com/photo-1595769816263-9b910be24d5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bW92aWUlMjB0aGVhdGVyfGVufDB8fDB8fHww&w=1000&q=80)
+      no-repeat center center / cover;
 }
 
 .h-main {
@@ -13,7 +15,5 @@
 @media (min-width: 1024px) {
   .home {
     width: calc(100vw - 50px);
-    background: url(https://images.unsplash.com/photo-1595769816263-9b910be24d5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bW92aWUlMjB0aGVhdGVyfGVufDB8fDB8fHww&w=1000&q=80)
-      no-repeat center center / cover;
   }
 }

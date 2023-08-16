@@ -86,10 +86,10 @@ li {
 
 .up {
   position: fixed;
-  height: 50px;
-  width: 50px;
-  right: 30px;
-  bottom: 30px;
+  height: 40px;
+  width: 40px;
+  right: 25px;
+  bottom: 25px;
   border-radius: 50%;
   background: rgb(253, 224, 71);
   display: grid;
@@ -110,5 +110,11 @@ li {
   }
   .activeSidebar {
     display: none;
+  }
+  .up {
+    height: 50px;
+    width: 50px;
+    right: 30px;
+    bottom: 30px;
   }
 }
