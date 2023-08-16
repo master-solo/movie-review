@@ -1,0 +1,114 @@
+.bar {
+  width: 30px; height: 4px;
+  background-color: rgb(253, 224, 71);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.bar::before {
+  content: "";
+  position: absolute;
+  width: 30px; height: 4px;
+  background-color: rgb(253, 224, 71);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-10px);
+}
+
+.bar::after {
+  content: "";
+  position: absolute;
+  width: 30px; height: 4px;
+  background-color: rgb(253, 224, 71);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(10px);
+}
+
+.activeBar {
+  width: 30px; height: 4px;
+  background-color: rgb(253, 224, 71);
+  border-radius: 2px;
+  transform: translateX(-50px);
+  background: transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+.activeBar::before {
+  content: "";
+  position: absolute;
+  width: 30px; height: 4px;
+  background-color: rgb(253, 224, 71);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.activeBar::after {
+  content: "";
+  position: absolute;
+  width: 30px; height: 4px;
+  background-color: rgb(253, 224, 71);
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.sidebar {
+  position: absolute;
+  height: 40vh;
+  width: 200px;
+  background: rgb(30, 41, 59);
+  transform: translateX(-200px);
+  padding: 20px 4px;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.activeSidebar {
+  position: absolute;
+  height: 40vh;
+  width: 200px;
+  background: rgb(30, 41, 59);
+  margin: 0;
+  padding: 20px 4px;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+li {
+  margin: 5px 0;
+}
+
+.up {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  background: rgb(253, 224, 71);
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.upnone {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    max-width: calc(100% - 30px);
+  }
+  .sidebar {
+    display: none;
+  }
+  .activeSidebar {
+    display: none;
+  }
+}
