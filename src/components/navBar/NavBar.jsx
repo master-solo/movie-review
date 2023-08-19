@@ -1,44 +1,50 @@
 import { useState } from "react";
 import { Logo } from "../../constants/api/api";
 import "./NavBar.css";
+import { Link as LinkScroll } from 'react-scroll'
 
 const tabs = [
   {
     name: "Home",
-    path: "#home",
+    path: "home",
   },
   {
     name: "Movies",
-    path: "#movies",
+    path: "movies",
   },
   {
     name: "About",
-    path: "#about",
+    path: "about",
   },
   {
     name: "Contact",
-    path: "#contact",
+    path: "contact",
   },
 ];
 
 const NavBar = () => {
   const [active, setActive] = useState(false);
-  const [scroll, setScroll] = useState(false)
+  const [scroll, setScroll] = useState(false);
 
-  window.onscroll = () => {scrollFunction()}
+  window.onscroll = () => {
+    scrollFunction();
+  };
 
   const scrollFunction = () => {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      setScroll(true)
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      setScroll(true);
     } else {
-      setScroll(false)
+      setScroll(false);
     }
-  }
+  };
 
   const topFunction = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-  }
+  };
 
   return (
     <header>
@@ -54,11 +60,11 @@ const NavBar = () => {
             <div className=" flex ">
               {tabs.map((tab) => {
                 return (
-                  <div className=" px-4 py-2 mx-1 cursor-pointer text-yellow-300 hover:border-b border-yellow-300 ">
-                    <a href={tab.path} className=" uppercase ">
-                      {tab.name}
-                    </a>
-                  </div>
+                  <LinkScroll  to={tab.path} spy={true} smooth={true} offset={0} duration={500} >
+                    <div className=" px-4 py-2 mx-1 cursor-pointer text-yellow-300 hover:border-b border-yellow-300 ">
+                      <span className=" uppercase ">{tab.name}</span>
+                    </div>
+                  </LinkScroll>
                 );
               })}
             </div>
@@ -75,17 +81,15 @@ const NavBar = () => {
           </div>
         </div>
         <div className={active ? "activeSidebar" : "sidebar"}>
-          <ul className=" list-none ">
+          <div className="  ">
             {tabs.map((tab) => {
               return (
-                <li className=" py-2 px-4 " onClick={() => setActive(false)}>
-                  <a href={tab.path} className=" uppercase text-yellow-300 ">
-                    {tab.name}
-                  </a>
-                </li>
+                <LinkScroll to={tab.path} spy={true} smooth={true} offset={0} duration={500} className=" uppercase text-yellow-300 ">
+                    <div className=" py-2 px-4 uppercase " onClick={() => setActive(false)}>{tab.name}</div>
+                  </LinkScroll>
               );
             })}
-          </ul>
+          </div>
           <div>
             <button className=" ml-2 bg-yellow-600 px-4 rounded-md hover:text-white ">
               Login
@@ -93,7 +97,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <div className={scroll? "up" : "upnone"} onClick={() => topFunction()} >
+      <div className={scroll ? "up" : "upnone"} onClick={() => topFunction()}>
         <i class="fa-solid fa-angle-up fa-bounce text-xl "></i>
       </div>
     </header>

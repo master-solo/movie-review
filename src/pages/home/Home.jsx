@@ -1,5 +1,6 @@
 import { Logo, intro } from "../../constants/api/api";
 import "./Home.css";
+import { Link as LinkScroll } from 'react-scroll'
 
 const Home = () => {
   return (
@@ -21,12 +22,12 @@ const Home = () => {
           </span>
         </div>
         <div className=" flex justify-center items-center mt-7 ">
-          <a href="#movies">
+          <LinkScroll to='movies' spy={true} smooth={true} offset={0} duration={500}>
             <button className=" bg-yellow-600 py-2 px-4 rounded-md flex justify-center items-center hover:text-white ">
               <span>See Reviews</span>
               <i class="fa-solid fa-arrow-right-long fa-beat ml-1"></i>
             </button>
-          </a>
+          </LinkScroll>
         </div>
       </div>
     </div>

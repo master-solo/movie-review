@@ -5,7 +5,7 @@ export const Hero = "https://th.bing.com/th/id/OIP.6ZAGyQqK9RsylXZpwPbx-wHaES?pi
 export const intro = "Welcome to a cinematic journey like no other! Our movie review website is your ultimate destination for insightful, engaging, and thought-provoking critiques of the latest blockbusters, hidden gems, and timeless classics. Whether you're a die-hard cinephile or simply looking for a captivating film to watch, our reviews offer a blend of analysis, emotion, and storytelling that will enrich your movie-watching experience. Join us as we delve into the magical world of cinema, where every frame is a canvas of imagination and every story has the power to touch our hearts and minds."
 
 
-export const Movies = [
+export const movies = [
   {
     "id": "0",
     "image": "https://channelmyanmar.org/wp-content/uploads/2023/08/MV5BOWY3Yjk2ZGItODFkZC00YzM0LWJjOWMtZjZlNmFiNGE0NGFmXkEyXkFqcGdeQXVyMTQyNDk2NzE@._V1_-139x200.jpg",
