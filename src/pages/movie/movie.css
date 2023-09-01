@@ -1,0 +1,7 @@
+
+
+@media (min-width: 1024px) {
+  .mm {
+    width: calc(100% - 30px);
+  }
+}

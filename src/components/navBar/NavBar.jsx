@@ -13,12 +13,12 @@ const tabs = [
     path: "movies",
   },
   {
-    name: "About",
-    path: "about",
-  },
-  {
     name: "Contact",
     path: "contact",
+  },
+  {
+    name: "About us",
+    path: "about",
   },
 ];
 
