@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movies-doctor/static/css/main.c3f6908e.css",
+    "main.js": "/movies-doctor/static/js/main.44fd7b99.js",
+    "index.html": "/movies-doctor/index.html",
+    "main.c3f6908e.css.map": "/movies-doctor/static/css/main.c3f6908e.css.map",
+    "main.44fd7b99.js.map": "/movies-doctor/static/js/main.44fd7b99.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3f6908e.css",
+    "static/js/main.44fd7b99.js"
+  ]
+}
